@@ -11,6 +11,8 @@ import 'View.dart';
     /** Reference to the view*/
     View view = new View();
 
+    /** Reference to the field*/
+
 
     view.updateField([["","","I"],["SE","H","SW"],["V","?","V"],["NE","H","NW"],["","O",""]]);
 
