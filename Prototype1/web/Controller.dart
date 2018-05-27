@@ -6,14 +6,26 @@ import 'View.dart';
  * This class reacts to user input
  */
 
+/** Reference to the view*/
+View _view = new View();
+
+/** Reference to the field*/
+Field _field;
+
+  void prepareGame(){
+
+    // TODO load from JSOM
+    List<List<Tile>> tiles = [[new Tile("SW", false, ["S","W"])],
+                              [new Tile("SW", false, ["S","W"])],
+                              [new Tile("SW", false, ["S","W"])]];
+
+    _field = new Field(tiles);
+  }
+
   main(){
 
-    /** Reference to the view*/
-    View view = new View();
 
-    /** Reference to the field*/
-
-
-    view.updateField([["","","I"],["SE","H","SW"],["V","?","V"],["NE","H","NW"],["","O",""]]);
+    
+    _view.updateField(_field.getField);
 
   }
