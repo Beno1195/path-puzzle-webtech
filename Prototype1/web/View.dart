@@ -9,22 +9,15 @@ class View {
   /**
    * list of image-paths
    */
-  List<List<String>> images = [
-    ["NE","Path_corner_NE.png"],
-    ["NW","Path_corner_NW.png"],
-    ["SE","Path_corner_SE.png"],
-    ["SW","Path_corner_SW.png"],
-    ["H","Path_horizontal.png"],
-    ["V","Path_vertical.png"],
-    ["?","Path_hidden.png"],
-    ["I","Input.png"],
-    ["O","Output.png"]
-  ];
+  List<List<String>> images;
 
   /**
    * Basic constructor
    */
-  View(){}
+  View(List<List<String>> imageList){
+
+    images = imageList;
+  }
 
   /**
    * Generates a HTML-Table from the given Field
