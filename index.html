@@ -11,9 +11,39 @@
 </head>
 
 <body>
+
+<div id="startMenu">
     <h1>Path Puzzle</h1>
-  <div id="output"></div>
-<div id="Log"></div>
+    <div id="buttons">
+        <button id="startButton">Spiel starten</button>
+        <button id="levelButton">Level-Auswahl</button>
+    </div>
+    <h2>Spielmodus wählen:</h2>
+    <div class="selectGameMode">
+        <input type="radio" id="casual" name="gamemode">
+        <label for="casual">Normal</label>
+        <input type="radio" id="timer" name="gamemode">
+        <label for="timer">Timer</label>
+        <input type="radio" id="counter" name="gamemode">
+        <label for="counter">Zuglimit</label>
+    </div>
+</div>
+<div id="game" class="invisible">
+    <table id="gameField"></table>
+    <div id="log"></div>
+    <button id="returnGame">Zum Hauptmenü</button>
+</div>
+
+<div id="levelSelect" class="invisible">
+    <h1>Level-Auswahl</h1>
+    <button id="returnLevel">Zum Hauptmenü</button>
+</div>
+
+
+<div id="popUp" class="invisible">
+    <div id="massage"></div>
+    <button id="returnPopUp">Zum Hauptmenü</button>
+</div>
 
 
 
