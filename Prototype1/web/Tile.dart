@@ -9,6 +9,8 @@ class Tile {
   List<String> _accessPoints;
   bool _visited = false;
 
+  String switchable = "true";
+
   /** Basic constructor  */
   Tile(String this._type, bool this._isHidden, List<String> this._accessPoints);
 
@@ -16,6 +18,9 @@ class Tile {
   String get getType => _type;
   bool get getHidden => _isHidden;
 
+  void visit() {
+    _isHidden = false;
+  }
   /** Getter for the path algorithm */
   List<String> get getAccessPoints => _accessPoints;
   bool get getVisited => _visited;
