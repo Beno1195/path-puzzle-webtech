@@ -4,6 +4,7 @@ import 'View.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
+import 'JsonImport.dart';
 
 /**
  * This class reacts to user input
@@ -155,6 +156,7 @@ void popUp(String text){
 }
 main()
 {
+    jsonImport();
     prepareGame();
     startMenu();
 }
