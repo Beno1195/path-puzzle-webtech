@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf86c040-b219-44f6-9317-c24a7e68e768" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Prototype1/build/web/test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototype1/web/test.json" beforeDir="false" />
-    </list>
+    <list default="true" id="bf86c040-b219-44f6-9317-c24a7e68e768" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/Prototype1/.pub/" />
     <ignored path="$PROJECT_DIR$/Prototype1/build/" />
@@ -37,7 +34,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prototype1/web/Controller.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1156">
@@ -63,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonImport.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JsonImport.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Prototype1/web/JsonImport.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="170">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -231,12 +228,12 @@
       <workItem from="1529612838172" duration="155000" />
       <workItem from="1529613159621" duration="624000" />
       <workItem from="1529685313003" duration="1369000" />
-      <workItem from="1529769262769" duration="574000" />
+      <workItem from="1529769262769" duration="1501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4310000" />
+    <option name="totallyTimeSpent" value="5237000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -574,16 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/JsonImport.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Prototype1/web/View.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -607,6 +594,16 @@
           <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/JsonImport.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
