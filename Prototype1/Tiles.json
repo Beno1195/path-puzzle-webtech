@@ -1,0 +1,43 @@
+{
+  "type": "SE",
+  "isHidden": false,
+  "accessPoints": "SE",
+  "visible": true,
+  "switchable": true
+}
+
+{
+  "type": "SW",
+  "isHidden": false,
+  "accessPoints": "SW",
+  "visible": true,
+  "switchable": true
+}
+{
+  "type": "NE",
+  "isHidden": false,
+  "accessPoints": "NE",
+  "visible": true,
+  "switchable": true
+}
+{
+  "type": "NW",
+  "isHidden": false,
+  "accessPoints": "NW",
+  "visible": true,
+  "switchable": true
+}
+{
+  "type": "V",
+  "isHidden": false,
+  "accessPoints": "NS",
+  "visible": true,
+  "switchable": true
+}
+{
+  "type": "H",
+  "isHidden": false,
+  "accessPoints": "WE",
+  "visible": true,
+  "switchable": true
+}
