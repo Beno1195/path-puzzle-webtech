@@ -41,3 +41,10 @@
   "visible": true,
   "switchable": true
 }
+{
+  "type": "R",
+  "isHidden": false,
+  "accessPoints": "",
+  "visible": true,
+  "switchable": false
+}
