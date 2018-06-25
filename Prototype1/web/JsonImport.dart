@@ -7,6 +7,11 @@ void jsonImport() {
   print("HALLO");
   HttpRequest.getString(url).then((str){
     str.split('Level');
-    print(JSON.decode(str));
+    Map data = JSON.decode(str);
+
+    data.forEach((int index, Map level) {
+    data[""];
+    });
+
   });
 }
