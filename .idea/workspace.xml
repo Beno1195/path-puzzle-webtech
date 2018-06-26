@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf86c040-b219-44f6-9317-c24a7e68e768" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Prototype1/web/Tiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/web/Tiles.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototype1/web/JsonImport.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/web/JsonImport.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/Prototype1/.pub/" />
@@ -27,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonImport.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JsonImport.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Prototype1/web/JsonImport.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="255">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -71,7 +71,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prototype1/web/Controller.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -231,16 +231,15 @@
       <workItem from="1529613159621" duration="624000" />
       <workItem from="1529685313003" duration="1369000" />
       <workItem from="1529769262769" duration="1501000" />
-      <workItem from="1530026746057" duration="329000" />
+      <workItem from="1530026746057" duration="1012000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8624000" />
+    <option name="totallyTimeSpent" value="9307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -572,16 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/JsonImport.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Prototype1/web/Field.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -605,6 +594,16 @@
           <caret line="65" column="57" lean-forward="true" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="57" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/JsonImport.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>

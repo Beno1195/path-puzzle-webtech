@@ -6,11 +6,10 @@ void jsonImport() {
 
   print("HALLO");
   HttpRequest.getString(url).then((str){
-    str.split('Level');
     Map data = JSON.decode(str);
 
     data.forEach((int index, Map level) {
-    data[""];
+    data["Hidden"]; // gibt alle Daten für z.B. Hidden, Field etc. zurück
     });
 
   });
