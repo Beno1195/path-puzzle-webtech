@@ -1,44 +1,13 @@
 {
-
   "Level 1": {
-
-    "Field": [
-
-      [
-        "NW",
-        "H",
-        "H"
-      ],
-
-      [
-        "NE",
-        "V",
-        "SE"
-      ],
-
-      [
-        "SW",
-        "SW",
-        "NE"
-      ]
-
-    ],
- 
+    "Field": [["NW","H", "H"],
+              ["NE","V", "SE"],
+              ["SW","SW","NE"]],
     "Hidden" : "false",
     "Counter": "10",
-
     "Timer": "60",
-
-    "Input": [
-      3,
-      3
-    ],
-
-    "Output": [
-      0,
-      4
-    ]
-
+    "Input": [3, 3],
+    "Output": [0, 4]
   },
 
 

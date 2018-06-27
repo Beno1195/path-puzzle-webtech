@@ -1,8 +1,6 @@
 import 'Field.dart';
 import 'Tile.dart';
 import 'View.dart';
-import 'dart:async';
-import 'dart:convert';
 import 'dart:html';
 import 'JsonImport.dart';
 
@@ -20,40 +18,40 @@ String gameMode = "casual";
 int counter = 0;
   void prepareGame() {
     List<List<Tile>> tiles = [[
-      new Tile("I", false, ["S"]),
-      new Tile("", false, []),
-      new Tile("", false, []),
-      new Tile("", false, [])
+      new Tile("I", false, ["S"],"false"),
+      new Tile("", false, [],"false"),
+      new Tile("", false, [],"false"),
+      new Tile("", false, [],"false")
     ],
     [
-      new Tile("SE", true, ["S", "E"]),
-      new Tile("H", true, ["W", "E"]),
-      new Tile("SW", true, ["S", "W"]),
-      new Tile("SE", true, ["S", "E"])
+      new Tile("SE", true, ["S", "E"],"true"),
+      new Tile("H", true, ["W", "E"],"true"),
+      new Tile("SW", true, ["S", "W"],"true"),
+      new Tile("SE", true, ["S", "E"],"true")
     ],
     [
-      new Tile("SE", true, ["S", "E"]),
-      new Tile("H", true, ["W", "E"]),
-      new Tile("SW", true, ["S", "W"]),
-      new Tile("SE", true, ["S", "E"])
+      new Tile("SE", true, ["S", "E"],"true"),
+      new Tile("H", true, ["W", "E"],"true"),
+      new Tile("SW", true, ["S", "W"],"true"),
+      new Tile("SE", true, ["S", "E"],"true")
     ],
     [
-      new Tile("V", true, ["N", "S"]),
-      new Tile("SW", true, ["S", "W"]),
-      new Tile("V", true, ["N", "S"]),
-      new Tile("V", true, ["N", "S"])
+      new Tile("V", true, ["N", "S"],"true"),
+      new Tile("SW", true, ["S", "W"],"true"),
+      new Tile("V", true, ["N", "S"],"true"),
+      new Tile("V", true, ["N", "S"],"true")
     ],
     [
-      new Tile("NE", true, ["N", "E"]),
-      new Tile("H", true, ["W", "E"]),
-      new Tile("NW", true, ["N", "W"]),
-      new Tile("NE", true, ["N", "E"])
+      new Tile("NE", true, ["N", "E"],"true"),
+      new Tile("H", true, ["W", "E"],"true"),
+      new Tile("NW", true, ["N", "W"],"true"),
+      new Tile("NE", true, ["N", "E"],"true")
     ],
     [
-      new Tile("", false, [""]),
-      new Tile("O", false, ["N"]),
-      new Tile("", false, []),
-      new Tile("", false, [""])
+      new Tile("", false, [""],"false"),
+      new Tile("O", false, ["N"],"false"),
+      new Tile("", false, [],"false"),
+      new Tile("", false, [""],"false")
     ]
     ];
 
@@ -110,7 +108,6 @@ void game(List<List<String>> levelContent){
 
     _view.returnButtonGame.onClick.listen((e) async {
       _switchMenu(_view.menu, _view.game);
-      //_view.loadField(levelContent);
       startMenu();
     });
 
@@ -119,23 +116,29 @@ void game(List<List<String>> levelContent){
         Element tile = querySelector('#gameField td[col="${col}"][row="${row}"]');
         tile.onClick.listen((ev) {
           String feedback = _field.select(row, col);
+
           if(feedback == "select"){
             tile.classes.add("selected");
           }
           if(feedback == "switch") {
-            counter++;
+
             _view.removeSelction(_field.getField);
-            /*if(_field.findPath()){
-              _switchMenu(_view.popUp, _view.game);
-              popUp("GEWONNEN!");
-            }*/
-            if (counter > maxCounter) {
-              _switchMenu(_view.popUp, _view.game);
-              popUp("GAME OVER!");
+            if(gameMode == "counter") {
+              counter++;
+              if (counter > maxCounter) {
+                _switchMenu(_view.popUp, _view.game);
+                popUp("GAME OVER!");
+              }
+              _view.log.innerHtml = "counter: $counter";
             }
           }
-          _view.log.innerHtml = "counter: $counter";
+
           _view.updateField(_field.getField);
+
+          if(_field.findPath()){
+            _switchMenu(_view.popUp, _view.game);
+            popUp("Gewonnen!");
+          }
         });
       }
     }
@@ -156,7 +159,7 @@ void popUp(String text){
 }
 main()
 {
-    jsonImport();
+    //jsonImport();
     prepareGame();
     startMenu();
 }

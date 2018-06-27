@@ -8,17 +8,18 @@ class Field {
   /** holds all tiles of the field */
   List<List<Tile>> _tiles;
   List<int> selectA = [];
-  List<int> start = [];
+  Tile out;
+
   /** Basic constructor */
   Field(List<List<Tile>> this._tiles) {
-    for(int i=0;i<_tiles.length;i++){
-      for(int j=0;j<_tiles[i].length;j++)
-        {
-          if(_tiles[i][j].getType == "I"){
-            start.add(i);
-            start.add(j);
-          }
+    for (int i = 0; i < _tiles.length; i++) {
+      for (int j = 0; j < _tiles[i].length; j++) {
+        _tiles[i][j].xPosition = i;
+        _tiles[i][j].yPosition = j;
+        if (_tiles[i][j].getType == "O") {
+         out = _tiles[i][j];
         }
+      }
     }
   }
 
@@ -27,7 +28,6 @@ class Field {
     List<List<String>> ret = [];
     for (int i = 0; i < _tiles.length; i++) {
       List<String> row = [];
-
       for (int j = 0; j < _tiles[i].length; j++) {
         if (!_tiles[i][j].getHidden) {
           row.add(_tiles[i][j].getType);
@@ -44,10 +44,11 @@ class Field {
       _tiles[row][col].visit();
       return "Is Hidden";
     }
-    else {
+    else if (_tiles[row][col].switchable == "true") {
       if (selectA.length == 0) {
         selectA.add(row);
         selectA.add(col);
+        print("x: ${_tiles[row][col].xPosition}y: ${_tiles[row][col].yPosition}");
         return "select";
       }
       else {
@@ -58,36 +59,90 @@ class Field {
     }
   }
 
-
   /** core function to switch two tiles */
-  bool switchTiles(int aZ, int aS, int bZ, int bS) {
-    Tile temp;
-    if (_tiles[aZ][aS].switchable == "true" &&
-        _tiles[bZ][bS].switchable == "true") {
-      temp = _tiles[aZ][aS];
-      _tiles[aZ][aS] = _tiles[bZ][bS];
-      _tiles[bZ][bS] = temp;
+  void switchTiles(int aZ, int aS, int bZ, int bS) {
+    Tile tempA;
+    Tile tempB;
+    tempA = _tiles[aZ][aS];
+    tempB = _tiles[bZ][bS];
+    _tiles[aZ][aS] = tempB;
+    _tiles[bZ][bS] = tempA;
 
-      return true;
-    }
-
-    else {
-      return false;
+    /**Sync of the coordinates**/
+    for (int i = 0; i < _tiles.length; i++) {
+      for (int j = 0; j < _tiles[i].length; j++) {
+        _tiles[i][j].xPosition = i;
+        _tiles[i][j].yPosition = j;
+      }
     }
   }
 
+  bool checkConnection(Tile currentTile) {
+    currentTile.setVisited(true);
+    bool value = false;
+    if (currentTile.getType == "I") {
+      print("Input");
 
+      return true;
+    }
+    if (currentTile.getAccessPoints.contains("N")) {
+      print("nachbar N");
+      if (currentTile.xPosition - 1 >= 0) {
+        Tile neighbor = _tiles[currentTile.xPosition - 1][currentTile
+            .yPosition];
+        if (neighbor.getAccessPoints.contains("S") && !neighbor.getVisited) {
+          if(!value) {
+            value = checkConnection(neighbor);
+          }
+        }
+      }
+    }
+
+    if (currentTile.getAccessPoints.contains("S")) {
+      print("nachbar S");
+      if (currentTile.xPosition + 1 <= _tiles.length) {
+        Tile neighbor = _tiles[currentTile.xPosition + 1][currentTile.yPosition];
+        if (neighbor.getAccessPoints.contains("N") && !neighbor.getVisited) {
+          if(!value) {
+            value = checkConnection(neighbor);
+          }
+        }
+      }
+    }
+    if (currentTile.getAccessPoints.contains("W")) {
+      print("nachbar W");
+      if (currentTile.yPosition - 1 >= 0) {
+        Tile neighbor = _tiles[currentTile.xPosition][currentTile.yPosition - 1];
+        if (neighbor.getAccessPoints.contains("E") && !neighbor.getVisited) {
+          if(!value) {
+            value = checkConnection(neighbor);
+          }
+        }
+      }
+    }
+    if (currentTile.getAccessPoints.contains("E")) {
+      print("Nachbar O");
+      if (currentTile.yPosition + 1 <= _tiles[currentTile.xPosition].length) {
+        Tile neighbor = _tiles[currentTile.xPosition][currentTile.yPosition + 1];
+        if (neighbor.getAccessPoints.contains("W") && !neighbor.getVisited) {
+          if(!value) {
+            value = checkConnection(neighbor);
+          }
+        }
+      }
+    }
+    return value;
+  }
+  void resetVisited(){
+    for (int i = 0; i < _tiles.length; i++) {
+      for (int j = 0; j < _tiles[i].length; j++) {
+        _tiles[i][j].setVisited(false);
+      }
+    }
+  }
   bool findPath() {
+    resetVisited();
+   return checkConnection(out);
 
-   /* List<Tile> visited = [];
-    List<Tile> next = [];
-    Tile current = _tiles[start[0]][start[1]];
-
-    if(current.getAccessPoints.contains("N"))
-    next.add(_tiles[0][0]);
-
-    next.add(_tiles[start[0]][start[1]];
-    */
-    return false;
   }
 }
