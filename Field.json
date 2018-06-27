@@ -1,0 +1,247 @@
+{
+  "Level 1": {
+    "Field": [["NW","H", "H"],
+              ["NE","V", "SE"],
+              ["SW","SW","NE"]],
+    "Hidden" : "false",
+    "Counter": "10",
+    "Timer": "60",
+    "Input": [3, 3],
+    "Output": [0, 4]
+  },
+
+
+  "Level 2": {
+
+    "Field": [
+
+      [
+        "SW",
+        "V",
+        "V"
+      ],
+
+      [
+        "SE",
+        "H",
+        "NE"
+      ],
+
+      [
+        "NW",
+        "NW",
+        "SE"
+      ]
+
+    ],
+ 
+    "Hidden" : "false",
+    "Counter": "15",
+
+    "Timer": "45",
+
+    "Input": [
+      4,
+      3
+    ],
+ 
+   "Output": [
+      0,
+      0
+    ]
+ 
+ },
+
+
+  "Level 3": {
+
+    "Field": [
+ 
+      [
+        "V",
+        "H",
+        "NE"
+        ],
+
+      [
+        "V",
+        "H",
+        "V"
+         ],
+ 
+      [
+        "NW",
+        "H",
+        "SW"
+       ],
+
+      [
+        "NW",
+        "NW",
+        "SE"
+      ]
+
+    ],
+
+    "Hidden" : "false",
+    "Counter": "17",
+
+    "Timer": "45",
+
+    "Input": [
+      4,
+      5
+    ],
+ 
+   "Output": [
+      0,
+      0
+    ]
+ 
+ },
+
+
+  "Level 4": {
+
+    "Field": [
+
+      [
+        "V",
+        "H",
+        "SE"
+       ],
+
+      [
+        "V",
+        "NW",
+        "H"
+       ],
+
+      [
+        "SW",
+        "H",
+        "SW"
+      ],
+
+      [
+        "NW",
+        "V",
+        "NE"
+      ]
+ 
+   ],
+
+    "Hidden" : "true",
+    "Counter": "14",
+
+    "Timer": "40",
+
+    "Input": [
+      0,
+      5
+    ],
+
+    "Output": [
+      5,
+      0
+    ]
+
+  },
+
+
+  "Level 5": {
+ 
+   "Field": [
+ 
+      [
+        "V",
+        "H",
+        "SE"
+        ],
+
+      [
+        "V",
+        "NW",
+        "H"
+        ],
+
+      [
+        "SW",
+        "H",
+        "SW"
+       ],
+ 
+      [
+        "NW",
+        "V",
+        "NE"
+       ]
+   
+ ],
+
+    "Hidden" : "true",
+    "Counter": "12",
+ 
+    "Timer": "35",
+ 
+    "Input": [
+      0,
+      5
+    ],
+
+    "Output": [
+      5,
+      0
+    ]
+
+  },
+
+
+  "Level 6": {
+
+    "Field": [
+ 
+      [
+        "V",
+        "H",
+        "SE"
+      ],
+
+      [
+        "V",
+        "R",
+        "H"
+      ],
+ 
+      [
+        "SW",
+        "H",
+        "SW"
+      ],
+ 
+      [
+        "NW",
+        "V",
+        "NE"
+      ]
+  
+  ],
+  
+    "Hidden" : "true",
+    "Counter": "13",
+
+    "Timer": "37",
+
+    "Input": [
+      0,
+      5
+    ],
+
+    "Output": [
+      5,
+      0
+    ]
+
+  }
+
+}

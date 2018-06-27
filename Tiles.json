@@ -1,0 +1,101 @@
+{
+
+"SE" : 
+{
+  "accessPoints": "SE",
+  "switchable": "true",
+  "Path" : "Path_corner_SE.png"
+},
+
+"SW":
+{
+  "isHidden": false,
+  "accessPoints": "SW",
+  "switchable": "true",
+  "Path" : "Path_corner_SW.png"
+},
+ "NE":
+{
+  "isHidden": false,
+  "accessPoints": "NE",
+  "switchable": "true",
+  "Path" : "Path_corner_NE.png"
+},
+  "NW":
+{
+  "isHidden": false,
+  "accessPoints": "NW",
+  "switchable": "true",
+  "Path" : "Path_corner_NW.png"
+},
+"V":
+{
+  "isHidden": false,
+  "accessPoints": "NS",
+  "switchable": "true",
+  "Path" : "Path_vertical.png"
+},
+"H":
+{
+  "isHidden": false,
+  "accessPoints": "WE",
+  "switchable": "true",
+  "Path" : "Path_horizontal.png"
+},
+"R":
+{
+  "isHidden": false,
+  "accessPoints": "",
+  "switchable": "false",
+  "Path" : "rock.png"
+},
+"Hidden":
+{
+  "isHidden": true,
+  "accessPoints": "",
+  "switchable": "false",
+  "Path" : "Path_hidden.png"
+},
+"SES":
+{
+  "accessPoints": "SE",
+  "switchable": "false",
+  "Path" : "Path_corner_SEstone.png"
+},
+"SWS":
+{
+  "isHidden": false,
+  "accessPoints": "SW",
+  "switchable": "false",
+  "Path" : "Path_corner_SWstone.png"
+},
+"NES":
+{
+  "isHidden": false,
+  "accessPoints": "NE",
+  "switchable": "false",
+  "Path" : "Path_corner_NEstone.png"
+},
+"NWS":
+{
+  "isHidden": false,
+  "accessPoints": "NW",
+  "switchable": "false",
+  "Path" : "Path_corner_NWstone.png"
+},
+"VS":
+{
+
+  "isHidden": false,
+  "accessPoints": "NS",
+  "switchable": "false",
+  "Path" : "Path_verticalstone.png"
+},
+"HS":
+{
+  "isHidden": false,
+  "accessPoints": "WE",
+  "switchable": "false",
+  "Path" : "Path_horizontalstone.png"
+}
+}
