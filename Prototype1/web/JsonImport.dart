@@ -1,17 +1,24 @@
 import 'dart:convert';
 import 'dart:html';
+import 'dart:async';
+class JsonImport {
 
-void jsonImport() {
+  String tilePath = "Tiles.json";
 
-  String url = 'Field.json';
+  JsonImport() {}
 
-  print("HALLO");
-  HttpRequest.getString(url).then((str){
-    Map data = JSON.decode(str);
+  void jsonImport() {
 
-    data.forEach((int index, Map level) {
-    data["Hidden"]; // gibt alle Daten für z.B. Hidden, Field etc. zurück
+    String url = 'Field.json';
+
+    print("HALLO");
+    HttpRequest.getString(url).then((str){
+      Map data = JSON.decode(str);
+
+      data.forEach((int index, Map level) {
+        data["Hidden"]; // gibt alle Daten für z.B. Hidden, Field etc. zurück
+      });
+
     });
-
-  });
+  }
 }

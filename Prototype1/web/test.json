@@ -1,18 +1,3 @@
 {
-  "name": "Georg",
-  "alter": 47,
-  "verheiratet": false,
-  "beruf": null,
-  "kinder": [
-    {
-      "name": "Lukas",
-      "alter": 19,
-      "schulabschluss": "Realschule"
-    },
-    {
-      "name": "Lisa",
-      "alter": 14,
-      "schulabschluss": null
-    }
-  ]
+  "Test" : "test";
 }

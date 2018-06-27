@@ -81,12 +81,10 @@ class Field {
     currentTile.setVisited(true);
     bool value = false;
     if (currentTile.getType == "I") {
-      print("Input");
-
       return true;
     }
     if (currentTile.getAccessPoints.contains("N")) {
-      print("nachbar N");
+
       if (currentTile.xPosition - 1 >= 0) {
         Tile neighbor = _tiles[currentTile.xPosition - 1][currentTile
             .yPosition];
@@ -99,7 +97,7 @@ class Field {
     }
 
     if (currentTile.getAccessPoints.contains("S")) {
-      print("nachbar S");
+
       if (currentTile.xPosition + 1 <= _tiles.length) {
         Tile neighbor = _tiles[currentTile.xPosition + 1][currentTile.yPosition];
         if (neighbor.getAccessPoints.contains("N") && !neighbor.getVisited) {
@@ -110,7 +108,7 @@ class Field {
       }
     }
     if (currentTile.getAccessPoints.contains("W")) {
-      print("nachbar W");
+
       if (currentTile.yPosition - 1 >= 0) {
         Tile neighbor = _tiles[currentTile.xPosition][currentTile.yPosition - 1];
         if (neighbor.getAccessPoints.contains("E") && !neighbor.getVisited) {
@@ -121,7 +119,7 @@ class Field {
       }
     }
     if (currentTile.getAccessPoints.contains("E")) {
-      print("Nachbar O");
+
       if (currentTile.yPosition + 1 <= _tiles[currentTile.xPosition].length) {
         Tile neighbor = _tiles[currentTile.xPosition][currentTile.yPosition + 1];
         if (neighbor.getAccessPoints.contains("W") && !neighbor.getVisited) {

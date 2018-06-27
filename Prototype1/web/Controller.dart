@@ -14,6 +14,7 @@ View _view;
 /** Reference to the field*/
 Field _field;
 
+JsonImport importObject;
 String gameMode = "casual";
 int counter = 0;
   void prepareGame() {
@@ -38,7 +39,7 @@ int counter = 0;
     [
       new Tile("V", true, ["N", "S"],"true"),
       new Tile("SW", true, ["S", "W"],"true"),
-      new Tile("V", true, ["N", "S"],"true"),
+      new Tile("X", true, ["N", "S","E","W"],"false"),
       new Tile("V", true, ["N", "S"],"true")
     ],
     [
@@ -63,7 +64,8 @@ int counter = 0;
                                    ["V","Path_vertical.png"],
                                    ["?","Path_hidden.png"],
                                    ["I","Input.png"],
-                                   ["O","Output.png"]];
+                                   ["O","Output.png"],
+                                   ["X","Path_cross_blocked.png"]];
 
 
     _field = new Field(tiles);
@@ -159,7 +161,9 @@ void popUp(String text){
 }
 main()
 {
-    //jsonImport();
+
+  importObject = new JsonImport();
+
     prepareGame();
     startMenu();
 }

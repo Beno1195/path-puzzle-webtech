@@ -1,8 +1,8 @@
 {
-  
+
 "SE" : 
 {
-  "accessPoints": ["S","E"],
+  "accessPoints": "SE",
   "switchable": "true",
   "Path" : "Path_corner_SE.png"
 },
@@ -10,7 +10,7 @@
 "SW":
 {
   "isHidden": false,
-  "accessPoints": ["S","W"],
+  "accessPoints": "SW",
   "switchable": "true",
   "Path" : "Path_corner_SW.png"
 },

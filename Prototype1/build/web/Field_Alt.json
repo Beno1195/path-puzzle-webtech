@@ -7,7 +7,7 @@
 		  ]	
 	"Hidden" : "False",
 	"Counter" : "10",
-	"Timer" : "60",
+	"Timer" : "60"
 	"Input" : [3, 3],
 	"Output" : [0, 4]
   }
