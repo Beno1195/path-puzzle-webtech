@@ -10,7 +10,8 @@ class View {
    * list of image-paths
    */
   List<List<String>> images;
-  
+
+  /**Element-Selector for easier interaktions**/
   final ButtonElement startGame = querySelector("#startButton");
   final ButtonElement levelSelect = querySelector("#levelButton");
   final ButtonElement returnButtonGame = querySelector("#returnGame");
@@ -30,6 +31,8 @@ class View {
   final ElementList tiles = querySelectorAll("#gamefield>*>td");
   final Element log = querySelector("#log");
   final Element massage = querySelector("#massage");
+
+  final Element levelCatalog = querySelector("#levelCatalog");
   /**
    * Basic constructor
    */
@@ -41,9 +44,6 @@ class View {
     querySelector('#gameField').setInnerHtml(toHtmlTable(content),validator: validator);
   }
 
-
-  
-  
   
   /**
    * Generates a HTML-Table from the given Field
@@ -97,7 +97,22 @@ class View {
     }
   }
   void loadField(List<List<String>> content){
-      gameField.innerHtml=toHtmlTable(content);
+
+    final validator = new NodeValidatorBuilder.common();
+    validator.allowElement('td', attributes: ['row', 'col']);
+    querySelector('#gameField').setInnerHtml(toHtmlTable(content),validator: validator);
+
+  }
+
+  void updateLevelCatalog(List<String>name){
+
+    String ret ="";
+    final validator = new NodeValidatorBuilder.common();
+    validator.allowElement('td', attributes: ['content']);
+    for(int i = 0; i< name.length;i++){
+      ret += "<tr><td content='${name[i]}'>${name[i]}</td></tr>";
+    }
+    levelCatalog.setInnerHtml(ret,validator: validator);
   }
 
   void updateLog(String content){

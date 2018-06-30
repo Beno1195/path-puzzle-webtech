@@ -2,7 +2,7 @@ import 'Field.dart';
 import 'Tile.dart';
 import 'View.dart';
 import 'dart:html';
-import 'JsonImport.dart';
+import 'dart:convert';
 
 /**
  * This class reacts to user input
@@ -14,65 +14,60 @@ View _view;
 /** Reference to the field*/
 Field _field;
 
-JsonImport importObject;
+/** Data for the Gamemode **/
 String gameMode = "casual";
-int counter = 0;
-  void prepareGame() {
-    List<List<Tile>> tiles = [[
-      new Tile("I", false, ["S"],"false"),
-      new Tile("", false, [],"false"),
-      new Tile("", false, [],"false"),
-      new Tile("", false, [],"false")
-    ],
-    [
-      new Tile("SE", true, ["S", "E"],"true"),
-      new Tile("H", true, ["W", "E"],"true"),
-      new Tile("SW", true, ["S", "W"],"true"),
-      new Tile("SE", true, ["S", "E"],"true")
-    ],
-    [
-      new Tile("SE", true, ["S", "E"],"true"),
-      new Tile("H", true, ["W", "E"],"true"),
-      new Tile("SW", true, ["S", "W"],"true"),
-      new Tile("SE", true, ["S", "E"],"true")
-    ],
-    [
-      new Tile("V", true, ["N", "S"],"true"),
-      new Tile("SW", true, ["S", "W"],"true"),
-      new Tile("X", true, ["N", "S","E","W"],"false"),
-      new Tile("V", true, ["N", "S"],"true")
-    ],
-    [
-      new Tile("NE", true, ["N", "E"],"true"),
-      new Tile("H", true, ["W", "E"],"true"),
-      new Tile("NW", true, ["N", "W"],"true"),
-      new Tile("NE", true, ["N", "E"],"true")
-    ],
-    [
-      new Tile("", false, [""],"false"),
-      new Tile("O", false, ["N"],"false"),
-      new Tile("", false, [],"false"),
-      new Tile("", false, [""],"false")
-    ]
-    ];
 
-     List<List<String>> imageList = [["NE","Path_corner_NE.png"],
-                                   ["NW","Path_corner_NW.png"],
-                                   ["SE","Path_corner_SE.png"],
-                                   ["SW","Path_corner_SW.png"],
-                                   ["H","Path_horizontal.png"],
-                                   ["V","Path_vertical.png"],
-                                   ["?","Path_hidden.png"],
-                                   ["I","Input.png"],
-                                   ["O","Output.png"],
-                                   ["X","Path_cross_blocked.png"]];
+List<String> inputTyps =[];
+List<String> outputTyps = [];
+
+Map _tiledata;
+Map _leveldata;
+
+String currentLevel = "";
 
 
-    _field = new Field(tiles);
-    _view = new View(imageList, _field.getField);
+void loadTileData() {
+  var url = "Tiles.json";
+
+  // call the web server asynchronously
+  HttpRequest.getString(url).then(prepareView);
+
+}
+
+void loadLevelData(){
+  var url = "Level.json";
+
+  // call the web server asynchronously
+  HttpRequest.getString(url).then(loadLevel);
+}
+
+void loadLevel(String jsonString){
+  _leveldata = JSON.decode(jsonString);
+  startMenu();
+}
+
+/** Placeholder for a JSON-Implementation**/
+  void prepareView(String jsonString) {
+
+    List<List<String>> imageList = new List<List<String>>();
+     _tiledata = JSON.decode(jsonString);
+
+    _tiledata.forEach((key,value) {
+      imageList.add([key,value["Path"]]);
+      if(value["Input"]== true){
+        inputTyps.add(key);
+      }
+      else if(value["Output"] == true){
+        outputTyps.add(key);
+      }
+    });
+
+    _view = new View(imageList, []);
+    loadLevelData();
   }
 
-_switchMenu(Element toShow, Element toHide) {
+/** Function to switch the Menus in the view **/
+switchMenu(Element toShow, Element toHide) {
   if (toShow != null) {
     toShow.classes.add("visible");
     toShow.classes.remove("invisible");
@@ -84,14 +79,51 @@ _switchMenu(Element toShow, Element toHide) {
   }
 }
 
+List<List<Tile>> genarateLevel(String levelID) {
+
+
+  List<List<Tile>> ret = new List<List<Tile>>();
+  Map level = _leveldata[levelID];
+
+  String current= "";
+  List<List<String>> field = level["Field"];
+
+
+  for(int i=0;i<field.length;i++) {
+    List<Tile> row = [];
+    for(int j=0;j<field[i].length;j++){
+       current = field[i][j];
+       if(_tiledata.containsKey(current)){
+          if(inputTyps.contains(current) || outputTyps.contains(current)){
+            row.add(new Tile(current, false, _tiledata[current]["accessPoints"],_tiledata[current]["switchable"]));
+          }
+          else{
+            row.add(new Tile(current, level["Hidden"], _tiledata[current]["accessPoints"],_tiledata[current]["switchable"]));
+
+          }
+       }
+       else{
+         row.add(new Tile("", false, [],"false"));
+       }
+    }
+    ret.add(row);
+  }
+    return ret;
+  }
+
 void startMenu(){
+
+    String _currentLevel = "Level 1";
+    currentLevel = _currentLevel;
     _view.startGame.onClick.listen((e) async {
-      game(_field.getField);
-      _switchMenu(_view.game, _view.menu);
-      //_view.updateLog(gameMode);
+      print("im at 1");
+      _field = new Field(genarateLevel(currentLevel),inputTyps,outputTyps);
+      _view.loadField(_field.getField);
+      game();
+      switchMenu(_view.game, _view.menu);
     });
     _view.levelSelect.onClick.listen((e) async {
-      _switchMenu(_view.level, _view.menu);
+      switchMenu(_view.level, _view.menu);
       levelselect();
     });
     _view.casualMode.onClick.listen((e) async{
@@ -104,12 +136,13 @@ void startMenu(){
       gameMode = "timer";
     });
   }
-void game(List<List<String>> levelContent){
+void game(){
 
-    int maxCounter = 20;
-
+    int maxCounter = _leveldata[currentLevel]["Counter"];
+    int counter = 0;
+    _view.log.innerHtml = "";
     _view.returnButtonGame.onClick.listen((e) async {
-      _switchMenu(_view.menu, _view.game);
+      switchMenu(_view.menu, _view.game);
       startMenu();
     });
 
@@ -128,7 +161,8 @@ void game(List<List<String>> levelContent){
             if(gameMode == "counter") {
               counter++;
               if (counter > maxCounter) {
-                _switchMenu(_view.popUp, _view.game);
+
+                switchMenu(_view.popUp, _view.game);
                 popUp("GAME OVER!");
               }
               _view.log.innerHtml = "counter: $counter";
@@ -138,32 +172,53 @@ void game(List<List<String>> levelContent){
           _view.updateField(_field.getField);
 
           if(_field.findPath()){
-            _switchMenu(_view.popUp, _view.game);
+            switchMenu(_view.popUp, _view.game);
             popUp("Gewonnen!");
           }
         });
       }
     }
 }
+/** Menu Element for the Level-Selection**/
 void levelselect(){
+
+  List<String> levels = [];
+  _leveldata.forEach((key,value){
+    levels.add(key);
+  });
+  _view.updateLevelCatalog(levels);
+
+  for(int i= 0;i<levels.length;i++){
+    String content = levels[i];
+    Element level = querySelector('#levelCatalog td[content = "$content"]');
+    level.onClick.listen((ev) {
+      currentLevel = content;
+      print(currentLevel);
+      _field = new Field(genarateLevel(currentLevel),inputTyps,outputTyps);
+      _view.loadField(_field.getField);
+      game();
+      switchMenu(_view.game, _view.level);
+    });
+  }
+
+
+
+  print(levels);
   _view.returnButtonLevel.onClick.listen((e) async {
-    _switchMenu(_view.menu, _view.level);
+    switchMenu(_view.menu, _view.level);
     startMenu();
   });
 }
 
+/** A PopUp to inform the player if he loose or won **/
 void popUp(String text){
   _view.updatePopUp("<h1>$text</h1>");
   _view.returnButtonPopUp.onClick.listen((e) async{
-    _switchMenu(_view.menu, _view.popUp);
+    switchMenu(_view.menu, _view.popUp);
     startMenu();
   });
 }
-main()
-{
 
-  importObject = new JsonImport();
-
-    prepareGame();
-    startMenu();
+main() {
+   loadTileData();
 }
