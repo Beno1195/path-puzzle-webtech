@@ -152,7 +152,7 @@
     "Output" : false
   },
   "VB":{
-    "accessPoints": ["N","E"],
+    "accessPoints": ["N","S"],
     "switchable": "false",
     "Path" : "Path_vertical_blocked.png",
     "Input" : false,
@@ -235,63 +235,6 @@
     "accessPoints": [""],
     "switchable": "false",
     "Path" : "blocked.png",
-    "Input" : false,
-    "Output" : false
-  },
-
-  "FSE":{
-    "accessPoints": [""],
-    "switchable": "false",
-    "Path" : "Wall_Corner_SE.png",
-    "Input" : false,
-    "Output" : false
-  },
-  "FSW":{
-    "accessPoints": [""],
-    "switchable": "false",
-    "Path" : "Wall_Corner_SW.png",
-    "Input" : false,
-    "Output" : false
-  },
-  "FNE":{
-    "accessPoints": [""],
-    "switchable": "false",
-    "Path" : "Wall_Corner_NE.png",
-    "Input" : false,
-    "Output" : false
-  },
-  "FNW":{
-    "accessPoints": [""],
-    "switchable": "false",
-    "Path" : "Wall_Corner_NW.png",
-    "Input" : false,
-    "Output" : false
-  },
-  "FS":{
-    "accessPoints": [""],
-    "switchable": "false",
-    "Path" : "Wall_S.png",
-    "Input" : false,
-    "Output" : false
-  },
-  "FN":{
-    "accessPoints": [""],
-    "switchable": "false",
-    "Path" : "Wall_N.png",
-    "Input" : false,
-    "Output" : false
-  },
-  "FW":{
-    "accessPoints": [""],
-    "switchable": "false",
-    "Path" : "Wall_W.png",
-    "Input" : false,
-    "Output" : false
-  },
-  "FE":{
-    "accessPoints": [""],
-    "switchable": "false",
-    "Path" : "Wall_E.png",
     "Input" : false,
     "Output" : false
   }
