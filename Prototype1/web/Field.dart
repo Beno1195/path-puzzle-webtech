@@ -16,7 +16,6 @@ class Field {
 
   /** Basic constructor */
   Field(List<List<Tile>> this._tiles,List<String>this._inputTyps,List<String>this._outputTyps) {
-    print("Im Here");
     for (int i = 0; i < _tiles.length; i++) {
       for (int j = 0; j < _tiles[i].length; j++) {
         _tiles[i][j].xPosition = i;
@@ -57,7 +56,6 @@ class Field {
       if (selectA.length == 0) {
         selectA.add(row);
         selectA.add(col);
-        print("${_tiles[row][col].getAccessPoints}");
         return "select";
       }
       else {
@@ -66,7 +64,6 @@ class Field {
         return "switch";
       }
     }
-    else print("${_tiles[row][col].getAccessPoints}");
   }
 
   /** core function to switch two tiles */
@@ -130,7 +127,7 @@ class Field {
     }
     if (currentTile.getAccessPoints.contains("E")) {
 
-      if (currentTile.yPosition + 1 <= _tiles[currentTile.xPosition].length) {
+      if (currentTile.yPosition + 1 < _tiles[currentTile.xPosition].length) {
         Tile neighbor = _tiles[currentTile.xPosition][currentTile.yPosition + 1];
         if (neighbor.getAccessPoints.contains("W") && !neighbor.getVisited) {
           if(!value) {
@@ -154,7 +151,6 @@ class Field {
     for(int i =0;i<output.length;i++){
       resetVisited();
       if(ret) {
-        print("output + $i");
         ret = checkConnection(output[i],"IN");
       }
     }

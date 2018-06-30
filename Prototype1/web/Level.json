@@ -1,21 +1,22 @@
 {
   "Level 1": {
-    "Field": [["IN","","IN"],
-              ["NW","X", "V"],
-              ["NE","V", "NW"],
-              ["SE","SW","NW"],
-              ["OS","",""]],
-    "Hidden" : true,
+    "Field": [["IN","",""],
+              ["V","SW", "V"],
+              ["NE","H", "NW"],
+              ["NE","SW","NW"],
+              ["","","OS"]],
+    "Hidden" : false,
     "Counter": 10,
     "Timer": 60
   },
 
   "Level 2": {
-    "Field": [["","","","",""],
-              ["IW","SW", "V", "V",""],
-              ["","SE", "H", "NE","OE"],
-              ["","NW", "NW", "SE",""]],
-    "Hidden" : false,
+    "Field": [["IN","","",""],
+              ["SW", "V", "V"],
+              ["SE", "H", "NE"],
+              ["NW", "NW", "SE"],
+              ["","","OS",""]],
+    "Hidden" : true,
     "Counter": 15,
     "Timer": 45
  },
@@ -32,10 +33,11 @@
   },
 
   "Level 4": {
-    "Field": [["V", "H", "SE"],
-              ["V", "NW", "H"],
-              ["SW", "H", "SW"],
-              ["NW", "V", "NE"]],
+    "Field": [["IN","","IN"],
+              ["NW","TN", "V"],
+              ["NE","V", "NW"],
+              ["SE","SW","SE"],
+              ["OS","","OS"]],
     "Hidden" : true,
     "Counter": 14,
     "Timer": 40

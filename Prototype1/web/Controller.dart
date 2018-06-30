@@ -116,7 +116,7 @@ void startMenu(){
     String _currentLevel = "Level 1";
     currentLevel = _currentLevel;
     _view.startGame.onClick.listen((e) async {
-      print("im at 1");
+
       _field = new Field(genarateLevel(currentLevel),inputTyps,outputTyps);
       _view.loadField(_field.getField);
       game();
@@ -193,7 +193,6 @@ void levelselect(){
     Element level = querySelector('#levelCatalog td[content = "$content"]');
     level.onClick.listen((ev) {
       currentLevel = content;
-      print(currentLevel);
       _field = new Field(genarateLevel(currentLevel),inputTyps,outputTyps);
       _view.loadField(_field.getField);
       game();
@@ -203,7 +202,6 @@ void levelselect(){
 
 
 
-  print(levels);
   _view.returnButtonLevel.onClick.listen((e) async {
     switchMenu(_view.menu, _view.level);
     startMenu();
