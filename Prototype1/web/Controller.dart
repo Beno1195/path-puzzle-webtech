@@ -23,6 +23,7 @@ List<String> outputTyps = [];
 Map _tiledata;
 Map _leveldata;
 
+List<String> levels = [];
 String currentLevel = "";
 
 
@@ -43,6 +44,9 @@ void loadLevelData(){
 
 void loadLevel(String jsonString){
   _leveldata = JSON.decode(jsonString);
+  _leveldata.forEach((key,value){
+    levels.add(key);
+  });
   startMenu();
 }
 
@@ -182,10 +186,7 @@ void game(){
 /** Menu Element for the Level-Selection**/
 void levelselect(){
 
-  List<String> levels = [];
-  _leveldata.forEach((key,value){
-    levels.add(key);
-  });
+
   _view.updateLevelCatalog(levels);
 
   for(int i= 0;i<levels.length;i++){
@@ -210,10 +211,22 @@ void levelselect(){
 
 /** A PopUp to inform the player if he loose or won **/
 void popUp(String text){
+  int nextIndex = 0;
+  if(levels.indexOf(currentLevel)+1 < levels.length) {
+    nextIndex = levels.indexOf(currentLevel) + 1;
+  }
+  print("next Levelindex = ${nextIndex}");
   _view.updatePopUp("<h1>$text</h1>");
   _view.returnButtonPopUp.onClick.listen((e) async{
     switchMenu(_view.menu, _view.popUp);
     startMenu();
+  });
+  _view.nextLevel.onClick.listen((e) async{
+    currentLevel=levels[nextIndex];
+    _field = new Field(genarateLevel(currentLevel),inputTyps,outputTyps);
+    _view.loadField(_field.getField);
+    game();
+    switchMenu(_view.game, _view.popUp);
   });
 }
 

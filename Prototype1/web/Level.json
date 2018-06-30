@@ -2,8 +2,8 @@
   "Level 1": {
     "Field": [["IN","",""],
               ["V","SW", "V"],
-              ["NE","H", "NW"],
-              ["NE","SW","NW"],
+              ["SW","H", "NW"],
+              ["NE","NE","NW"],
               ["","","OS"]],
     "Hidden" : false,
     "Counter": 10,
@@ -15,7 +15,7 @@
               ["SW", "V", "V"],
               ["SE", "H", "NE"],
               ["NW", "NW", "SE"],
-              ["","","OS",""]],
+              ["","OS",""]],
     "Hidden" : true,
     "Counter": 15,
     "Timer": 45
@@ -23,19 +23,19 @@
 
   "Level 3": {
     "Field": [["IN","","IN"],
-      ["NW","X", "V"],
-      ["NE","V", "NW"],
-      ["SE","SW","SE"],
-      ["OS","","OS"]],
+              ["NW","X", "V"],
+              ["NE","V", "NW"],
+              ["SE","SW","SE"],
+              ["OS","","OS"]],
     "Hidden" : false,
-    "Counter": 10,
+    "Counter": 17,
     "Timer": 60
   },
 
   "Level 4": {
     "Field": [["IN","","IN"],
               ["NW","TN", "V"],
-              ["NE","V", "NW"],
+              ["NE","TS", "NW"],
               ["SE","SW","SE"],
               ["OS","","OS"]],
     "Hidden" : true,
@@ -44,10 +44,11 @@
   },
 
   "Level 5": {
-    "Field": [["V", "H", "SE"],
-              ["V", "NW", "H"],
+    "Field": [["SE","SE","NW"],
+              ["OS", "SE", "VB"],
+              ["V", "HB", "TE"],
               ["SW", "H", "SW"],
-              ["NW", "V", "NE"]],
+              ["NW", "IS", "NE"]],
     "Hidden" : true,
     "Counter": 12,
     "Timer": 35
@@ -55,13 +56,25 @@
 
 
   "Level 6": {
-    "Field": [["V", "H", "SE"],
-              ["V", "R", "H"],
-              ["SW", "H", "SW"],
-              ["NW", "V", "NE"]],
+    "Field": [["H","V", "H", "SE","IN"],
+              ["OW","V", "NW", "H","NE"],
+              ["ON","SW", "H", "SW","IE"],
+              ["X","NW", "V", "NE","SW"]],
+    "Hidden" : true,
+    "Counter": 13,
+    "Timer": 37
+  },
+
+  "Level 7": {
+    "Field": [["IN","IN","IN","IN","IN"],
+              ["H","V", "H", "SE","NE"],
+              ["TS","NW", "NW", "H","TW"],
+              ["TE","TN", "SE", "SW","X"],
+              ["X","NW", "TS", "NE","SW"],
+              ["OS","OS","OS","OS","OS"]],
+
     "Hidden" : true,
     "Counter": 13,
     "Timer": 37
   }
-
 }

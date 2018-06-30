@@ -152,7 +152,7 @@
     "Output" : false
   },
   "VB":{
-    "accessPoints": ["N","E"],
+    "accessPoints": ["N","S"],
     "switchable": "false",
     "Path" : "Path_vertical_blocked.png",
     "Input" : false,

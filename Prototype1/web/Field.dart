@@ -56,7 +56,9 @@ class Field {
       if (selectA.length == 0) {
         selectA.add(row);
         selectA.add(col);
+        print(_tiles[row][col].getAccessPoints);
         return "select";
+
       }
       else {
         switchTiles(selectA[0], selectA[1], row, col);
@@ -64,6 +66,7 @@ class Field {
         return "switch";
       }
     }
+    else print(_tiles[row][col].getAccessPoints);
   }
 
   /** core function to switch two tiles */
@@ -105,7 +108,7 @@ class Field {
 
     if (currentTile.getAccessPoints.contains("S")) {
 
-      if (currentTile.xPosition + 1 <= _tiles.length) {
+      if (currentTile.xPosition + 1 < _tiles.length) {
         Tile neighbor = _tiles[currentTile.xPosition + 1][currentTile.yPosition];
         if (neighbor.getAccessPoints.contains("N") && !neighbor.getVisited) {
           if(!value) {

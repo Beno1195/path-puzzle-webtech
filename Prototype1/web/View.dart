@@ -17,7 +17,7 @@ class View {
   final ButtonElement returnButtonGame = querySelector("#returnGame");
   final ButtonElement returnButtonLevel = querySelector("#returnLevel");
   final ButtonElement returnButtonPopUp = querySelector("#returnPopUp");
-
+  final ButtonElement nextLevel = querySelector("#nextLevel");
   final ButtonElement casualMode = querySelector("#casual");
   final ButtonElement timerMode = querySelector("#timer");
   final ButtonElement counterMode = querySelector("#counter");
