@@ -1,101 +1,241 @@
 {
-  
-"SE" : 
-{
-  "accessPoints": ["S","E"],
-  "switchable": "true",
-  "Path" : "Path_corner_SE.png"
-},
+  "IN":{
+    "accessPoints": ["S"],
+    "switchable": "false",
+    "Path" : "Input_N.png",
+    "Input" : true,
+    "Output" : false
+  },
+  "IE":{
+    "accessPoints": ["W"],
+    "switchable": "false",
+    "Path" : "Input_E.png",
+    "Input" : true,
+    "Output" : false
+  },
+  "IS":{
+    "accessPoints": ["N"],
+    "switchable": "false",
+    "Path" : "Input_S.png",
+    "Input" : true,
+    "Output" : false
+  },
+  "IW":{
+    "accessPoints": ["E"],
+    "switchable": "false",
+    "Path" : "Input_W.png",
+    "Input" : true,
+    "Output" : false
+  },
 
-"SW":
-{
-  "isHidden": false,
-  "accessPoints": ["S","W"],
-  "switchable": "true",
-  "Path" : "Path_corner_SW.png"
-},
- "NE":
-{
-  "isHidden": false,
-  "accessPoints": "NE",
-  "switchable": "true",
-  "Path" : "Path_corner_NE.png"
-},
-  "NW":
-{
-  "isHidden": false,
-  "accessPoints": "NW",
-  "switchable": "true",
-  "Path" : "Path_corner_NW.png"
-},
-"V":
-{
-  "isHidden": false,
-  "accessPoints": "NS",
-  "switchable": "true",
-  "Path" : "Path_vertical.png"
-},
-"H":
-{
-  "isHidden": false,
-  "accessPoints": "WE",
-  "switchable": "true",
-  "Path" : "Path_horizontal.png"
-},
-"R":
-{
-  "isHidden": false,
-  "accessPoints": "",
-  "switchable": "false",
-  "Path" : "rock.png"
-},
-"Hidden":
-{
-  "isHidden": true,
-  "accessPoints": "",
-  "switchable": "false",
-  "Path" : "Path_hidden.png"
-},
-"SES":
-{
-  "accessPoints": "SE",
-  "switchable": "false",
-  "Path" : "Path_corner_SEstone.png"
-},
-"SWS":
-{
-  "isHidden": false,
-  "accessPoints": "SW",
-  "switchable": "false",
-  "Path" : "Path_corner_SWstone.png"
-},
-"NES":
-{
-  "isHidden": false,
-  "accessPoints": "NE",
-  "switchable": "false",
-  "Path" : "Path_corner_NEstone.png"
-},
-"NWS":
-{
-  "isHidden": false,
-  "accessPoints": "NW",
-  "switchable": "false",
-  "Path" : "Path_corner_NWstone.png"
-},
-"VS":
-{
+  "ON":{
+    "accessPoints": ["S"],
+    "switchable": "false",
+    "Path" : "Output_N.png",
+    "Input" : false,
+    "Output" : true
 
-  "isHidden": false,
-  "accessPoints": "NS",
-  "switchable": "false",
-  "Path" : "Path_verticalstone.png"
-},
-"HS":
-{
-  "isHidden": false,
-  "accessPoints": "WE",
-  "switchable": "false",
-  "Path" : "Path_horizontalstone.png"
-}
+  },
+  "OE":{
+    "accessPoints": ["W"],
+    "switchable": "false",
+    "Path" : "Output_E.png",
+    "Input" : false,
+    "Output" : true
+
+  },
+  "OS":{
+    "accessPoints": ["N"],
+    "switchable": "false",
+    "Path" : "Output_S.png",
+    "Input" : false,
+    "Output" : true
+  },
+  "OW":{
+    "accessPoints": ["E"],
+    "switchable": "false",
+    "Path" : "Output_W.png",
+    "Input" : false,
+    "Output" : true
+  },
+
+
+  "?":{
+    "accessPoints": [""],
+    "switchable": "false",
+    "Path" : "Path_hidden.png",
+    "Input" : false,
+    "Output" : false
+  },
+
+
+  "NE":{
+    "accessPoints": ["N","E"],
+    "switchable": "true",
+    "Path" : "Path_corner_NE.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "NEB":{
+    "accessPoints": ["N","E"],
+    "switchable": "false",
+    "Path" : "Path_corner_NE_blocked.png",
+    "Input" : false,
+    "Output" : false
+  },
+
+  "NW":{
+    "accessPoints": ["N","W"],
+    "switchable": "true",
+    "Path" : "Path_corner_NW.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "NWB":{
+    "accessPoints": ["N","W"],
+    "switchable": "false",
+    "Path" : "Path_corner_NW_blocked.png",
+    "Input" : false,
+    "Output" : false
+  },
+
+  "SE":{
+    "accessPoints": ["S","E"],
+    "switchable": "true",
+    "Path" : "Path_corner_SE.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "SEB":{
+    "accessPoints": ["S","E"],
+    "switchable": "false",
+    "Path" : "Path_corner_SE_blocked.png",
+    "Input" : false,
+    "Output" : false
+  },
+
+  "SW":{
+    "accessPoints": ["S","W"],
+    "switchable": "true",
+    "Path" : "Path_corner_SW.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "SWB":{
+    "accessPoints": ["S","W"],
+    "switchable": "false",
+    "Path" : "Path_corner_SW_blocked.png",
+    "Input" : false,
+    "Output" : false
+  },
+
+  "H":{
+    "accessPoints": ["W","E"],
+    "switchable": "true",
+    "Path" : "Path_horizontal.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "HB":{
+    "accessPoints": ["W","E"],
+    "switchable": "false",
+    "Path" : "Path_horizontal_blocked.png",
+    "Input" : false,
+    "Output" : false
+  },
+
+  "V":{
+    "accessPoints": ["N","S"],
+    "switchable": "true",
+    "Path" : "Path_vertical.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "VB":{
+    "accessPoints": ["N","S"],
+    "switchable": "false",
+    "Path" : "Path_vertical_blocked.png",
+    "Input" : false,
+    "Output" : false
+  },
+
+  "X":{
+    "accessPoints": ["N","E","S","W"],
+    "switchable": "true",
+    "Path" : "Path_cross.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "XB":{
+    "accessPoints": ["N","E","S","W"],
+    "switchable": "false",
+    "Path" : "Path_cross_blocked.png",
+    "Input" : false,
+    "Output" : false
+  },
+
+  "TN":{
+    "accessPoints": ["N","E","W"],
+    "switchable": "true",
+    "Path" : "Path_Tcross_N.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "TNB":{
+    "accessPoints": ["N","E","W"],
+    "switchable": "false",
+    "Path" : "Path_Tcross_N_blocked.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "TE":{
+    "accessPoints": ["E","N","S"],
+    "switchable": "true",
+    "Path" : "Path_Tcross_E.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "TEB":{
+    "accessPoints": ["E","N","S"],
+    "switchable": "false",
+    "Path" : "Path_Tcross_E_blocked.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "TS":{
+    "accessPoints": ["S","E","W"],
+    "switchable": "true",
+    "Path" : "Path_Tcross_S.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "TSB":{
+    "accessPoints": ["S","E","W"],
+    "switchable": "false",
+    "Path" : "Path_Tcross_S_blocked.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "TW":{
+    "accessPoints": ["W","S","N"],
+    "switchable": "true",
+    "Path" : "Path_Tcross_W.png",
+    "Input" : false,
+    "Output" : false
+  },
+  "TWB":{
+    "accessPoints": ["W","S","N"],
+    "switchable": "false",
+    "Path" : "Path_Tcross_W_blocked.png",
+    "Input" : false,
+    "Output" : false
+  },
+
+  "B":{
+    "accessPoints": [""],
+    "switchable": "false",
+    "Path" : "blocked.png",
+    "Input" : false,
+    "Output" : false
+  }
 }
