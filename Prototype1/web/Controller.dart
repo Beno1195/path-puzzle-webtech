@@ -14,19 +14,19 @@ View _view;
 /** Reference to the field*/
 Field _field;
 
-/** Data for the Gamemode **/
-String gameMode = "casual";
+/**Reference to the data of the JSON-Files*/
+Map _tiledata;
+Map _leveldata;
 
 /**Lists of the input- and outputTypes */
 List<String> inputTyps =[];
 List<String> outputTyps = [];
 
-/**Reference to the data of the JSON-Files*/
-Map _tiledata;
-Map _leveldata;
-
 /**Data to determine the level for the level-selection*/
 List<String> levels = [];
+
+/** Data for the Gamestart */
+String gameMode = "casual";
 String currentLevel = "";
 
 
@@ -147,47 +147,47 @@ void startMenu() {
 /**checks the user interactions during the game*/
 void game(){
 
-    int maxCounter = _leveldata[currentLevel]["Counter"];
-    int counter = 0;
+  int maxCounter = _leveldata[currentLevel]["Counter"];
+  int counter = 0;
 
-    _view.log.innerHtml = "";
-    _view.returnButtonGame.onClick.listen((e) async {                           //switch to the main menu
-      switchMenu(_view.menu, _view.game);
-      startMenu();
-    });
+  _view.log.innerHtml = "";
+  _view.returnButtonGame.onClick.listen((e) async {                           //switch to the main menu
+    switchMenu(_view.menu, _view.game);
+    startMenu();
+  });
 
-    /**checks if a valid tile is selected and switches them if a second one is selected */
-    for (int row = 0; row < _field.getField.length; row++) {
-      for (int col = 0; col < _field.getField[row].length; col++) {
-        Element tile = querySelector('#gameField td[col="${col}"][row="${row}"]');
-        tile.onClick.listen((ev) {
-          String feedback = _field.select(row, col);
+  /**checks if a valid tile is selected and switches them if a second one is selected */
+  for (int row = 0; row < _field.getField.length; row++) {
+    for (int col = 0; col < _field.getField[row].length; col++) {
+      Element tile = querySelector('#gameField td[col="${col}"][row="${row}"]');
+      tile.onClick.listen((ev) {
+        String feedback = _field.select(row, col);
 
-          if(feedback == "select"){
-            tile.classes.add("selected");
-          }
-          if(feedback == "switch") {
-            _view.removeSelction(_field.getField);
+        if(feedback == "select"){
+          tile.classes.add("selected");
+        }
+        if(feedback == "switch") {
+          _view.removeSelction(_field.getField);
 
-            if(gameMode == "counter") {                                         //if the turn limitation is enabled
-              counter++;
-              if (counter > maxCounter) {
-                switchMenu(_view.popUp, _view.game);
-                popUp("GAME OVER!");
-              }
-              _view.log.innerHtml = "counter: $counter";
+          if(gameMode == "counter") {                                         //if the turn limitation is enabled
+            counter++;
+            if (counter > maxCounter) {
+              switchMenu(_view.popUp, _view.game);
+              popUp("GAME OVER!");
             }
+            _view.log.innerHtml = "counter: $counter";
           }
+        }
 
-          _view.updateField(_field.getField);
+        _view.updateField(_field.getField);
 
-          if(_field.findPath()){                                                //Checks if all in- and outputs are connected -> the player wins
-            switchMenu(_view.popUp, _view.game);
-            popUp("Gewonnen!");
-          }
-        });
-      }
+        if(_field.findPath()){                                                //Checks if all in- and outputs are connected -> the player wins
+          switchMenu(_view.popUp, _view.game);
+          popUp("GEWONNEN!");
+        }
+      });
     }
+  }
 }
 
 /** Menu Element for the Level-Selection**/
@@ -216,10 +216,17 @@ void levelselect(){
 /** A PopUp to inform the player if he loose or won **/
 void popUp(String text){
   int nextIndex = 0;
+
   if(levels.indexOf(currentLevel)+1 < levels.length) {
-    nextIndex = levels.indexOf(currentLevel) + 1;
+    if(text != "GAME OVER!"){
+      nextIndex = levels.indexOf(currentLevel) + 1;
+      _view.nextLevel.setInnerHtml("Nächstes Level") ;
+    }
+    else {
+      nextIndex = levels.indexOf(currentLevel);
+      _view.nextLevel.setInnerHtml("Neuer Versuch") ;
+    }
   }
-  print("next Levelindex = ${nextIndex}");
   _view.updatePopUp("<h1>$text</h1>");
   _view.returnButtonPopUp.onClick.listen((e) async{
     switchMenu(_view.menu, _view.popUp);
@@ -236,5 +243,5 @@ void popUp(String text){
 
 /** Main function to start the program */
 main() {
-   loadTileData();
+  loadTileData();
 }
