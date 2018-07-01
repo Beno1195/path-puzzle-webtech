@@ -8,16 +8,16 @@ class Field {
   /**Holds all tiles of the field */
   List<List<Tile>> _tiles;
 
-  /**Holds the first selected tile*/
-  List<int> selectA = [];
-
-  /**Holds the in- and outputs of the current field*/
-  List<Tile> output = [];
-  List<Tile> input = [];
-
   /**A List of input- and outputTyps so its easy to add new through the Tile.json */
   List<String> _inputTyps = [];
   List<String> _outputTyps = [];
+
+  /**Holds the first selected tile*/
+  List<int> _selectA = [];
+
+  /**Holds the in- and outputs of the current field*/
+  List<Tile> _output = [];
+  List<Tile> _input = [];
 
   /** Basic constructor */
   Field(List<List<Tile>> this._tiles,List<String>this._inputTyps,List<String>this._outputTyps) {
@@ -26,14 +26,13 @@ class Field {
         _tiles[i][j].xPosition = i;                         //initialization of the tile-positions
         _tiles[i][j].yPosition = j;
         if (_outputTyps.contains(_tiles[i][j].getType)) {   //determination of the in- and outputs of the current field
-         output.add(_tiles[i][j]);
+          _output.add(_tiles[i][j]);
         }
         else if (_inputTyps.contains(_tiles[i][j].getType)) {
-          input.add(_tiles[i][j]);
+          _input.add(_tiles[i][j]);
         }
       }
     }
-
   }
 
   /** Getter that converts the Field for the visualization*/
@@ -59,27 +58,27 @@ class Field {
       return "Is Hidden";
     }
     else if (_tiles[row][col].switchable == "true") {
-      if (selectA.length == 0) {
-        selectA.add(row);
-        selectA.add(col);
+      if (_selectA.length == 0) {
+        _selectA.add(row);
+        _selectA.add(col);
         return "select";
       }
       else {
-        switchTiles(selectA[0], selectA[1], row, col);  //if the current selection is the second one, both tiles get switched
-        selectA.clear();
+        switchTiles(_selectA[0], _selectA[1], row, col);  //if the current selection is the second one, both tiles get switched
+        _selectA.clear();
         return "switch";
       }
     }
   }
 
   /** core function to switch two tiles */
-  void switchTiles(int aZ, int aS, int bZ, int bS) {
+  void switchTiles(int aX, int aY, int bX, int bY) {
     Tile tempA;
     Tile tempB;
-    tempA = _tiles[aZ][aS];
-    tempB = _tiles[bZ][bS];
-    _tiles[aZ][aS] = tempB;
-    _tiles[bZ][bS] = tempA;
+    tempA = _tiles[aX][aY];
+    tempB = _tiles[bX][bY];
+    _tiles[aX][aY] = tempB;
+    _tiles[bX][bY] = tempA;
 
     /**Sync of the coordinates**/
     for (int i = 0; i < _tiles.length; i++) {
@@ -99,7 +98,7 @@ class Field {
     if ((_inputTyps.contains(currentTile.getType)&& target == "IN") || (_outputTyps.contains(currentTile.getType)&& target == "OUT")) {
       return true;
     }
-
+    /**Checks the neighbors of all for possible sites*/
     if (currentTile.getAccessPoints.contains("N")) {
       if (currentTile.xPosition - 1 >= 0) {
         Tile neighbor = _tiles[currentTile.xPosition - 1][currentTile.yPosition];
@@ -160,18 +159,18 @@ class Field {
 
     bool ret = true;
 
-    for(int i =0;i<output.length;i++){                        //all outputs have to be connected
+    for(int i =0;i<_output.length;i++){                        //all outputs have to be connected
       resetVisited();
       if(ret) {
-        ret = checkConnection(output[i],"IN");
+        ret = checkConnection(_output[i],"IN");
       }
     }
-    for(int i =0;i<input.length;i++){                           //all inputs have to be connected
+    for(int i =0;i<_input.length;i++){                           //all inputs have to be connected
       resetVisited();
       if(ret) {
-        ret = checkConnection(input[i],"OUT");
+        ret = checkConnection(_input[i],"OUT");
       }
     }
-   return ret;
+    return ret;
   }
 }
