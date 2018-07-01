@@ -62,7 +62,7 @@ void prepareView(String jsonString) {
     }
   });
 
-  _view = new View(imageList, []);
+  _view = new View(imageList);
   loadLevelData();
 }
 

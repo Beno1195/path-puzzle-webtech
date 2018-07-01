@@ -27,7 +27,6 @@ class View {
   final Element popUp = querySelector("#popUp");
 
   final Element gameField = querySelector("#gameField");
-  final ElementList tiles = querySelectorAll("#gamefield>*>td");
   final Element log = querySelector("#log");
   final Element massage = querySelector("#massage");
 
@@ -37,12 +36,8 @@ class View {
   /**
    * Basic constructor
    */
-  View(List<List<String>> imageList,content){
+  View(List<List<String>> imageList){
     images = imageList;
-
-    final validator = new NodeValidatorBuilder.common();
-    validator.allowElement('td', attributes: ['row', 'col']);
-    querySelector('#gameField').setInnerHtml(toHtmlTable(content),validator: validator);
   }
 
 

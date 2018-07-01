@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf86c040-b219-44f6-9317-c24a7e68e768" name="Default" comment="" />
+    <list default="true" id="bf86c040-b219-44f6-9317-c24a7e68e768" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Prototype1/web/Controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/web/Controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototype1/web/View.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/web/View.dart" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/Prototype1/.pub/" />
     <ignored path="$PROJECT_DIR$/Prototype1/build/" />
@@ -19,26 +22,49 @@
       <file leaf-file-name="Controller.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prototype1/web/Controller.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="222" column="50" selection-start-line="222" selection-start-column="50" selection-end-line="222" selection-end-column="50" />
+            <state relative-caret-position="-2764">
+              <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tile.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tile.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prototype1/web/Tile.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+            <state relative-caret-position="561">
+              <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="View.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="View.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Prototype1/web/View.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+            <state relative-caret-position="276">
+              <caret line="123" column="18" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Path_vertical.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Prototype1/web/Resources/Path_vertical.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="Tiles.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Prototype1/web/Tiles.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="154" column="27" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Level.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Prototype1/web/Level.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1207">
+              <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -87,10 +113,10 @@
         <option value="$PROJECT_DIR$/Prototype1/web/JsonImport.dart" />
         <option value="$PROJECT_DIR$/Prototype1/web/Tiles.json" />
         <option value="$PROJECT_DIR$/Prototype1/web/Level.json" />
-        <option value="$PROJECT_DIR$/Prototype1/web/Tile.dart" />
-        <option value="$PROJECT_DIR$/Prototype1/web/View.dart" />
         <option value="$PROJECT_DIR$/Prototype1/web/index.html" />
         <option value="$PROJECT_DIR$/Prototype1/web/Field.dart" />
+        <option value="$PROJECT_DIR$/Prototype1/web/Tile.dart" />
+        <option value="$PROJECT_DIR$/Prototype1/web/View.dart" />
         <option value="$PROJECT_DIR$/Prototype1/web/Controller.dart" />
       </list>
     </option>
@@ -241,27 +267,28 @@
       <workItem from="1530026746057" duration="1012000" />
       <workItem from="1530362541220" duration="973000" />
       <workItem from="1530378157818" duration="13574000" />
-      <workItem from="1530455412460" duration="2326000" />
+      <workItem from="1530455412460" duration="6010000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40071000" />
+    <option name="totallyTimeSpent" value="43755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2742895" />
       <window_info anchor="bottom" id="TODO" order="5" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Pub Serve" order="4" weight="0.32905984" />
       <window_info anchor="bottom" id="Dart Analysis" order="9" weight="0.32943678" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2742895" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32905984" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Designer" order="2" />
@@ -279,7 +306,6 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -291,6 +317,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Prototype1/web/Controller.dart">
@@ -527,31 +558,10 @@
     <entry file="file://$PROJECT_DIR$/Prototype1/web/test.json" />
     <entry file="file://$PROJECT_DIR$/Prototype1/web/JsonImport.dart" />
     <entry file="file://$PROJECT_DIR$/Prototype1/web/Field.json" />
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/Level.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/Tiles.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2618">
-          <caret line="154" column="27" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Prototype1/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
           <caret line="44" column="34" lean-forward="true" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/View.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
         </state>
       </provider>
     </entry>
@@ -562,17 +572,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/Controller.dart">
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Tile.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="222" column="50" selection-start-line="222" selection-start-column="50" selection-end-line="222" selection-end-column="50" />
+        <state relative-caret-position="561">
+          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/Tile.dart">
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Controller.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+        <state relative-caret-position="-2764">
+          <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Resources/Path_vertical.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Tiles.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="154" column="27" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Level.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/View.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="123" column="18" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="18" />
         </state>
       </provider>
     </entry>
