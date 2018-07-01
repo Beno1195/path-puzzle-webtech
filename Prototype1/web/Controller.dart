@@ -32,7 +32,7 @@ String currentLevel = "";
 
 /**Loads the information about all tiles from the Tiles.json*/
 void loadTileData() {
-  var url = "Tiles.json";
+  var url = "Resources/Tiles.json";
 
   // call the web server asynchronously
   HttpRequest.getString(url).then(prepareView);
@@ -40,7 +40,7 @@ void loadTileData() {
 
 /**Loads the information about all level from the Level.json*/
 void loadLevelData(){
-  var url = "Level.json";
+  var url = "Resources/Level.json";
 
   // call the web server asynchronously
   HttpRequest.getString(url).then(loadLevel);
