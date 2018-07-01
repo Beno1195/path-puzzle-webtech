@@ -31,6 +31,6 @@ class Tile {
   /** Getter for the path algorithm */
   List<String> get getAccessPoints => _accessPoints;
   bool get getVisited => _visited;
-  void setVisited(bool value)=> _visited = value;
+  void setVisited(bool status)=> _visited = status;
  }
 
