@@ -3,15 +3,19 @@
  */
 class Tile {
 
-  /** Attributes */
+  /** Attributes for the representation of the tile*/
   String _type;
   bool _isHidden = true;
+
+  /**Attributes for the Path-finding-algorithm**/
   List<String> _accessPoints;
   bool _visited = false;
 
+  /**Position in the grid ... Makes it easier to determine the neighbours**/
   int xPosition = 0;
   int yPosition = 0;
 
+  /**Attributes for the user interactions**/
   String switchable = "true";
 
   /** Basic constructor  */

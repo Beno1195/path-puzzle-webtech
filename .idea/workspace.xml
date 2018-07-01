@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf86c040-b219-44f6-9317-c24a7e68e768" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototype1/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototype1/.pub/transformers/manifest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototype1/.pub/transformers/transformers.snapshot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototype1/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prototype1/web/Controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/web/Controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prototype1/web/Field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/web/Field.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototype1/web/Level.json" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/web/Level.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototype1/web/Tiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/web/Tiles.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prototype1/web/Tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/web/Tile.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prototype1/web/View.dart" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/web/View.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prototype1/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Prototype1/web/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/Prototype1/.pub/" />
@@ -23,38 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Tile.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Prototype1/web/Tile.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Field.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Prototype1/web/Field.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="110" column="37" lean-forward="true" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tiles.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Prototype1/web/Tiles.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="154" column="27" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Controller.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Prototype1/web/Controller.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="215" column="4" selection-start-line="215" selection-start-column="4" selection-end-line="215" selection-end-column="4" />
+            <state relative-caret-position="332">
+              <caret line="239" column="1" lean-forward="true" selection-start-line="239" selection-start-column="1" selection-end-line="239" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -62,26 +39,8 @@
       <file leaf-file-name="View.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Prototype1/web/View.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Level.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Prototype1/web/Level.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Prototype1/web/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="48" column="26" lean-forward="true" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="26" />
+            <state relative-caret-position="2261">
+              <caret line="133" selection-start-line="133" selection-end-line="133" />
             </state>
           </provider>
         </entry>
@@ -108,15 +67,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Prototype1/web/Field.json" />
-        <option value="$PROJECT_DIR$/Prototype1/web/Tile.dart" />
         <option value="$PROJECT_DIR$/Prototype1/web/test.json" />
         <option value="$PROJECT_DIR$/Prototype1/web/JsonImport.dart" />
         <option value="$PROJECT_DIR$/Prototype1/web/index.html" />
-        <option value="$PROJECT_DIR$/Prototype1/web/View.dart" />
         <option value="$PROJECT_DIR$/Prototype1/web/Tiles.json" />
-        <option value="$PROJECT_DIR$/Prototype1/web/Field.dart" />
         <option value="$PROJECT_DIR$/Prototype1/web/Level.json" />
+        <option value="$PROJECT_DIR$/Prototype1/web/Tile.dart" />
+        <option value="$PROJECT_DIR$/Prototype1/web/Field.dart" />
         <option value="$PROJECT_DIR$/Prototype1/web/Controller.dart" />
+        <option value="$PROJECT_DIR$/Prototype1/web/View.dart" />
       </list>
     </option>
   </component>
@@ -178,7 +137,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="last_opened_file_path" value="F:/Programme/dartium-windows-ia32-release(1)/dartium-win-ia32-stable-1.24.2.0/chrome.exe" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/path-puzzle-webtech" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -265,19 +224,19 @@
       <workItem from="1529769262769" duration="1501000" />
       <workItem from="1530026746057" duration="1012000" />
       <workItem from="1530362541220" duration="973000" />
-      <workItem from="1530378157818" duration="7186000" />
+      <workItem from="1530378157818" duration="12562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31357000" />
+    <option name="totallyTimeSpent" value="36733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="5" />
-      <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.32763532" />
+      <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.32621083" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Pub Serve" order="4" weight="0.32905984" />
       <window_info anchor="bottom" id="Dart Analysis" order="9" weight="0.32943678" />
@@ -317,44 +276,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/Tiles.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/JsonImport.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/Controller.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/Field.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Prototype1/web/View.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -625,13 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/Tile.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Prototype1/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -639,38 +553,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/View.dart">
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Resources/Input_E.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Resources/Output_E.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Resources/Output_N.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Level.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        <state relative-caret-position="1207">
+          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/Tiles.json">
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Resources/Path_corner_NE_blocked.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Resources/rock.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Tile.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="154" column="27" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
+        <state relative-caret-position="204">
+          <caret line="27" column="2" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Prototype1/web/Field.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="110" column="37" lean-forward="true" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
+        <state relative-caret-position="-1224">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Prototype1/web/Level.json">
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/Tiles.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+        <state relative-caret-position="2618">
+          <caret line="154" column="27" selection-start-line="154" selection-start-column="27" selection-end-line="154" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Prototype1/web/View.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Prototype1/web/Controller.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="215" column="4" selection-start-line="215" selection-start-column="4" selection-end-line="215" selection-end-column="4" />
+        <state relative-caret-position="332">
+          <caret line="239" column="1" lean-forward="true" selection-start-line="239" selection-start-column="1" selection-end-line="239" selection-end-column="1" />
         </state>
       </provider>
     </entry>

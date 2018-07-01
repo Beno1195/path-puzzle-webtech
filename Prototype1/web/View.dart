@@ -11,7 +11,7 @@ class View {
    */
   List<List<String>> images;
 
-  /**Element-Selector for easier interaktions**/
+  /**Element-Selector for easier interactions**/
   final ButtonElement startGame = querySelector("#startButton");
   final ButtonElement levelSelect = querySelector("#levelButton");
   final ButtonElement returnButtonGame = querySelector("#returnGame");
@@ -19,7 +19,6 @@ class View {
   final ButtonElement returnButtonPopUp = querySelector("#returnPopUp");
   final ButtonElement nextLevel = querySelector("#nextLevel");
   final ButtonElement casualMode = querySelector("#casual");
-  final ButtonElement timerMode = querySelector("#timer");
   final ButtonElement counterMode = querySelector("#counter");
 
   final Element game = querySelector("#game");
@@ -33,6 +32,8 @@ class View {
   final Element massage = querySelector("#massage");
 
   final Element levelCatalog = querySelector("#levelCatalog");
+
+
   /**
    * Basic constructor
    */
@@ -44,7 +45,7 @@ class View {
     querySelector('#gameField').setInnerHtml(toHtmlTable(content),validator: validator);
   }
 
-  
+
   /**
    * Generates a HTML-Table from the given Field
    */
@@ -53,25 +54,25 @@ class View {
 
     for(int row = 0;row<content.length;row++){
       ret += "<tr>";
-        for(int col = 0;col<content[row].length;col++){
-          ret += "<td row='${row}' col='${col}'>";
+      for(int col = 0;col<content[row].length;col++){
+        ret += "<td row='${row}' col='${col}'>";
 
-          for(int i=0;i<images.length;i++){
+        for(int i=0;i<images.length;i++){
 
-            if(images[i][0]==content[row][col]) {
-              ret += "<img src=""Resources/${images[i][1]}>";
-            }
+          if(images[i][0]==content[row][col]) {
+            ret += "<img src=""Resources/${images[i][1]}>";
           }
-
-          ret += "</td>";
         }
+
+        ret += "</td>";
+      }
       ret += "</tr>";
     }
-      return ret;
-    }
+    return ret;
+  }
 
   /**
-   * updates the hole Field
+   * updates the  Field
    */
   void updateField(List<List<String>> content) {
 
@@ -87,6 +88,7 @@ class View {
     }
   }
 
+  /** removes the selection indicator from the tiles*/
   void removeSelction(List<List<String>> content) {
 
     for(int row = 0;row < content.length;row++){
@@ -96,6 +98,8 @@ class View {
       }
     }
   }
+
+  /**initialize the field-table with a validator for row and col*/
   void loadField(List<List<String>> content){
 
     final validator = new NodeValidatorBuilder.common();
@@ -104,6 +108,7 @@ class View {
 
   }
 
+  /**updates the level catalog for the level-selection */
   void updateLevelCatalog(List<String>name){
 
     String ret ="";
@@ -115,12 +120,13 @@ class View {
     levelCatalog.setInnerHtml(ret,validator: validator);
   }
 
+  /**updates the log eg. the current counter if turn-limitation is enabled*/
   void updateLog(String content){
     log.innerHtml = content;
   }
 
+  /**shows the massage on the popUp eg. "Game Over!"*/
   void updatePopUp(String content){
     massage.innerHtml = content;
   }
-
 }
