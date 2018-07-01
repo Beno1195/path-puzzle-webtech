@@ -3838,7 +3838,7 @@ y=document
 y=new O.fF(null,y.querySelector("#startButton"),y.querySelector("#levelButton"),y.querySelector("#returnGame"),y.querySelector("#returnLevel"),y.querySelector("#returnPopUp"),y.querySelector("#nextLevel"),y.querySelector("#casual"),y.querySelector("#counter"),y.querySelector("#game"),y.querySelector("#startMenu"),y.querySelector("#levelSelect"),y.querySelector("#popUp"),y.querySelector("#gameField"),y.querySelector("#log"),y.querySelector("#massage"),y.querySelector("#levelCatalog"))
 y.a=z
 $.o=y
-W.cB("Level.json",null,null).as(B.ec())},"$1","ed",2,0,10],
+W.cB("Resources/Level.json",null,null).as(B.ec())},"$1","ed",2,0,10],
 kj:[function(a){var z=C.n.bQ(a)
 $.c5=z
 J.cf(z,new B.iu())
@@ -3915,7 +3915,7 @@ x=J.Q($.o.f)
 W.K(x.a,x.b,new B.iy(),!1,H.t(x,0))
 x=J.Q($.o.r)
 W.K(x.a,x.b,new B.iz(z),!1,H.t(x,0))},
-kk:[function(){W.cB("Tiles.json",null,null).as(B.ed())},"$0","cp",0,0,0],
+kk:[function(){W.cB("Resources/Tiles.json",null,null).as(B.ed())},"$0","cp",0,0,0],
 iA:{"^":"b:4;a",
 $2:function(a,b){var z=J.D(b)
 this.a.push([a,z.h(b,"Path")])
