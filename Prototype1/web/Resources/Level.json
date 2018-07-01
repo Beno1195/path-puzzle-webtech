@@ -76,5 +76,17 @@
     "Hidden" : true,
     "Counter": 13,
     "Timer": 37
+  },
+  "Level 8": {
+    "Field": [["IN","IN","","IN","IN"],
+              ["H","V", "H", "SE","TN"],
+              ["TS","B", "V", "B","TW"],
+              ["TE","B", "TN", "B","X"],
+              ["X","NW", "TS", "NE","SW"],
+              ["OS","OS","","OS","OS"]],
+
+    "Hidden" : true,
+    "Counter": 13,
+    "Timer": 37
   }
 }
